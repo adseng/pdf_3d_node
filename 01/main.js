@@ -17,11 +17,11 @@ const path = require('path');
     const page = await browser.newPage()
     // Set screen size
 
-    await page.goto('www.baidu.com', {
+    await page.goto('https://www.baidu.com', {
         waitUntil: 'networkidle2',
     })
 
-    await page.screenshot({path: path.resolve(__dirname, './out/1.png')})
-    await page.pdf({path: path.resolve(__dirname, './out/1.pdf'), format: 'A4'})
+    await page.screenshot({path: path.resolve(__dirname, './1.png')})
+    await page.pdf({path: path.resolve(__dirname, './1.pdf'), format: 'A4'})
     await browser.close()
 })()
